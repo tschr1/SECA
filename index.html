@@ -355,7 +355,7 @@
 
           <!-- Gym -->
           <div class="barrow">
-            <div class="label">High intensity interval training</div>
+            <div class="label">Fitness</div>
             <div class="track"><div class="fill" data-hours="115"></div></div>
             <div class="val"><span class="hours">115</span> hrs</div>
           </div>
@@ -389,7 +389,7 @@
 
           <div class="card activity">
             <span class="badge">Health + Resilience</span>
-            <h3>High intensity interval training — 115 hrs</h3>
+            <h3>Fitness — 115 hrs</h3>
             <p>
               Strength and conditioning, practicing safe form, and building a consistent workout schedule
             </p>
@@ -442,7 +442,7 @@
         </div>
 
         <div class="card pad">
-          <h3 style="margin:0 0 10px;"> High intensity interval trainingReflection</h3>
+          <h3 style="margin:0 0 10px;"> Fitness Reflection</h3>
           <p class="muted" style="margin:0 0 10px;">
             I spent <strong>over 100 hours</strong> training. I learned that progress comes from consistency:
             showing up, tracking workouts, working on form, and improving form gradually.
@@ -503,7 +503,7 @@
 
     // set total + top activity
     document.getElementById("totalHours").textContent = total + " hrs";
-    const labels = ["Guitar","Tennis","High intensity interval training","Coding"];
+    const labels = ["Guitar","Tennis","Fitness","Coding"];
     let topIdx = 0;
     for(let i=1;i<hours.length;i++) if(hours[i] > hours[topIdx]) topIdx = i;
     document.getElementById("topActivity").textContent = labels[topIdx];
