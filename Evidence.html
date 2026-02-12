@@ -5,116 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SECA Evidence</title>
   <style>
-    :root{
-  --bg:#06040c;
-  --panel: rgba(18, 10, 34, .92);
-  --text:#ffffff;
-  --muted: rgba(255,255,255,.70);
-  --line: rgba(255,255,255,.14);
-  --accent:#8b5cf6;
-  --accent2:#c084fc;
-  --shadow: 0 18px 55px rgba(0,0,0,.55);
+  :root{
+  --bg:#F8FAFC;
+  --panel:#FFFFFF;
+  --text:#0F172A;
+  --muted:#475569;
+  --line:#E2E8F0;
+
+  --accent:#1D4ED8;
+  --accent2:#3B82F6;
+
+  --shadow: 0 10px 30px rgba(15,23,42,.08);
   --r:18px;
   --max: 1000px;
 }
 
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
 body{
   margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+  color:var(--text);
   background:
-    radial-gradient(900px 600px at 12% 8%, rgba(139,92,246,.28), transparent 60%),
-    radial-gradient(900px 600px at 88% 18%, rgba(192,132,252,.18), transparent 60%),
-    radial-gradient(900px 600px at 50% 110%, rgba(139,92,246,.14), transparent 60%),
+    radial-gradient(700px 400px at 10% 0%, rgba(29,78,216,.06), transparent 60%),
+    radial-gradient(700px 400px at 90% 0%, rgba(59,130,246,.05), transparent 60%),
     var(--bg);
-  line-height:1.5;
+  line-height:1.6;
 }
 
+/* Layout */
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:40px 24px 60px;
+}
+
+.muted{color:var(--muted)}
+
+/* NAV */
 .nav{
-  position:sticky; top:0; z-index:10;
-  backdrop-filter: blur(14px);
-  background: rgba(0,0,0,.55);
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
+  z-index:20;
+}
+
+.nav-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:14px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
 .logo{
-  width:34px;height:34px;border-radius:10px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  box-shadow: 0 10px 30px rgba(139,92,246,.25);
+  width:34px;height:34px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
 }
 
+/* Buttons */
 .btn{
   border:1px solid var(--line);
-  background: rgba(255,255,255,.06);
-  color: var(--text);
+  background:white;
+  color:var(--text);
   padding:10px 14px;
   border-radius:14px;
-  font-weight:800;
+  font-weight:600;
   font-size:14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,.35);
   transition:.2s ease;
   cursor:pointer;
 }
+
 .btn:hover{
-  transform:translateY(-1px);
-  background: rgba(255,255,255,.10);
+  background:#F1F5F9;
 }
 
 .btn.primary{
-  border-color: transparent;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color:#0b0616;
+  border-color:transparent;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:white;
 }
 
+/* Card */
 .card{
+  background:var(--panel);
   border:1px solid var(--line);
-  background: var(--panel);
-  border-radius: var(--r);
-  box-shadow: var(--shadow);
-  padding:18px;
+  border-radius:var(--r);
+  box-shadow:var(--shadow);
+  padding:26px;
 }
 
+/* Grid */
+.grid{
+  margin-top:24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+
+/* Tiles */
 .tile{
   border:1px solid var(--line);
-  background: rgba(255,255,255,.06);
-  border-radius: 16px;
+  border-radius:16px;
   overflow:hidden;
+  background:white;
+  transition:.2s ease;
+}
+
+.tile:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(15,23,42,.08);
+}
+
+.tile img{
+  width:100%;
+  display:block;
 }
 
 .tile .cap{
-  padding:10px 12px;
+  padding:12px;
   font-size:13px;
-  color: var(--muted);
+  color:var(--muted);
   border-top:1px solid var(--line);
 }
-
-table{
-  width:100%;
-  border-collapse:separate;
-  border-spacing:0;
-  border-radius:16px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.06);
-  margin-top: 14px;
-}
-
-th, td{
-  padding:12px;
-  border-bottom:1px solid var(--line);
-  font-size:13px;
-  vertical-align: top;
-}
-
-th{
-  background: rgba(139,92,246,.12);
-  text-align:left;
-  color: rgba(255,255,255,.90);
-}
-
-td{ color: var(--muted); }
-
-  </style>
+</style>
 </head>
 <body>
 
