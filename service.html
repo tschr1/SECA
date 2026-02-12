@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Service Activities — Teoman</title>
+
+<style>
+:root{
+  --bg:#F8FAFC;
+  --panel:#FFFFFF;
+  --text:#0F172A;
+  --muted:#475569;
+  --line:#E2E8F0;
+
+  --accent:#1D4ED8;
+  --accent2:#3B82F6;
+
+  --shadow: 0 10px 30px rgba(15,23,42,.08);
+  --r:18px;
+  --max: 1000px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+  color:var(--text);
+  background:
+    radial-gradient(700px 400px at 10% 0%, rgba(29,78,216,.06), transparent 60%),
+    radial-gradient(700px 400px at 90% 0%, rgba(59,130,246,.05), transparent 60%),
+    var(--bg);
+  line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+.nav{
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  z-index:20;
+}
+
+.nav-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:14px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  width:34px;height:34px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+}
+
+.home-link{
+  font-size:14px;
+  font-weight:600;
+  color:var(--accent);
+}
+
+/* LAYOUT */
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:40px 24px 60px;
+}
+
+h1{
+  font-size:34px;
+  margin-bottom:8px;
+}
+
+.muted{
+  color:var(--muted);
+}
+
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  box-shadow:var(--shadow);
+  padding:26px;
+  margin-top:24px;
+}
+
+.badge{
+  display:inline-block;
+  margin-top:10px;
+  padding:6px 12px;
+  font-size:12px;
+  border-radius:999px;
+  background:#EFF6FF;
+  border:1px solid #DBEAFE;
+  color:var(--accent);
+}
+
+/* IMAGE */
+.image{
+  margin-top:18px;
+}
+
+.image img{
+  width:100%;
+  border-radius:14px;
+  border:1px solid var(--line);
+}
+
+/* SECTION TITLE */
+.section-title{
+  font-size:22px;
+  margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="logo"></div>
+      <strong>Teoman — SECA Portfolio</strong>
+    </div>
+
+    <a href="index.html" class="home-link">Home</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>Service Activities</h1>
+<p class="muted">
+These activities reflect my commitment to serving my school community.
+Through leadership, mentoring, and performance, I developed confidence,
+organisation skills, and a stronger sense of responsibility.
+</p>
+
+<!-- MUNKY -->
+<div class="card">
+  <h2>MUNKY Administration</h2>
+  <span class="badge">150 Hours</span>
+
+  <p>
+  Supporting MUNKY administration required organisation, responsibility,
+  and attention to detail. I helped coordinate tasks, assist with planning,
+  and contribute to smooth event management.
+  </p>
+
+  <p>
+  This experience strengthened my leadership, time management,
+  and teamwork skills. I learned how important structure and
+  preparation are for successful events.
+  </p>
+
+  <div class="image">
+    <img src="images/munky.jpg" alt="MUNKY Administration">
+  </div>
+</div>
+
+<!-- MUSIC GROUPED -->
+<div class="card">
+  <h2>Music, Mentorship & School Representation</h2>
+  <span class="badge">95 Hours Total</span>
+
+  <p class="muted">
+  Includes helping middle school students (5 hrs), fundraising concert (40 hrs),
+  national concert representation (10 hrs), school play fundraiser (25 hrs),
+  and music-related contributions.
+  </p>
+
+  <p>
+  Through music, I supported younger students while also representing
+  my school in larger performances. Teaching middle school students
+  improved my communication and patience.
+  </p>
+
+  <p>
+  Performing in concerts and national events strengthened my confidence,
+  discipline, and stage presence. These experiences showed me how music
+  can positively impact a community and bring people together.
+  </p>
+
+  <div class="image">
+    <img src="images/concert.jpg" alt="Concert Performance">
+  </div>
+</div>
+
+<!-- PE -->
+<div class="card">
+  <h2>Supporting Primary Physical Education</h2>
+  <span class="badge">4 Hours</span>
+
+  <p>
+  Assisting primary students in physical education required
+  encouragement, patience, and leadership.
+  </p>
+
+  <p>
+  I developed stronger communication skills and learned
+  the importance of being a positive role model for younger students.
+  </p>
+
+  <div class="image">
+    <img src="images/pe.jpg" alt="Helping in PE">
+  </div>
+</div>
+
+<!-- READING -->
+<div class="card">
+  <h2>Reading to Children (Turkish)</h2>
+  <span class="badge">5 Hours</span>
+
+  <p>
+  Reading to younger students helped improve their listening skills
+  while strengthening my ability to communicate clearly.
+  </p>
+
+  <p>
+  This experience reinforced how small contributions can make
+  a meaningful impact in a community.
+  </p>
+
+  <div class="image">
+    <img src="images/reading.jpg" alt="Reading to children">
+  </div>
+</div>
+
+</main>
+
+</body>
+</html>
