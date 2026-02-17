@@ -28,11 +28,14 @@
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   color:var(--text);
-  background: var(--bg);
+  background:
+    radial-gradient(900px 600px at 12% 8%, rgba(139,92,246,.28), transparent 60%),
+    radial-gradient(900px 600px at 88% 18%, rgba(192,132,252,.18), transparent 60%),
+    radial-gradient(900px 600px at 50% 110%, rgba(139,92,246,.14), transparent 60%),
+    var(--bg);
   line-height:1.5;
   overflow-x:hidden;
 }
-
 
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
@@ -87,13 +90,12 @@
       overflow:hidden;
       position:relative;
     }
-    .card{
-  border:1px solid #ccc;
-  background:#ffffff;
-  border-radius:8px;
-}
-
-      
+    .card::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: linear-gradient(135deg, rgba(124,92,255,.23), rgba(45,226,100,.12), transparent 55%);
+      pointer-events:none;
+    }
 
     .hero{
       padding:44px 0 12px;
@@ -262,41 +264,42 @@
 
 <body>
   <header class="nav">
-  <div class="nav-inner">
-    <div class="brand">
-      <div>
-        <div style="font-size:16px; font-weight:700;">Teoman</div>
-        <div style="font-size:13px; color:#555;">
-          SECA Portfolio • 12S • English School of Kyrenia
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:14px;">Teoman</div>
+          <div style="font-size:12px; color: var(--muted); margin-top:2px;">
+            SECA Portfolio • Service & Extra-Curricular Activities
+          </div>
         </div>
       </div>
-    </div>
 
-    <nav class="links">
+    <nav class="links" aria-label="Primary">
       <a href="#overview">Overview</a>
       <a href="#log">Hours Log</a>
       <a href="#reflections">Reflections</a>
+      <a href="service.html">Service</a>
     </nav>
-  </div>
-</header>
 
-<section id="overview">
-  <h1>SECA Portfolio</h1>
-  <p><strong>Teoman — 12S</strong></p>
-  <p>English School of Kyrenia</p>
-  <p>Service & Extra-Curricular Activities (2025–2026)</p>
-  <hr>
-</section>
+
+      <div style="display:flex; gap:10px;">
+        <button class="btn" onclick="window.print()">Print / Save PDF</button>
+       <a class="btn primary" href="Evidence.html">Evidence</a>
+
+      </div>
+    </div>
+  </header>
 
   <main class="wrap">
-    <section id="overview">
-  <h1>Service & Extra-Curricular Portfolio</h1>
-  <p class="muted">
-    This portfolio documents the time I committed to guitar, tennis, fitness,
-    and coding during the 2025–2026 academic year, along with reflections on what I learned.
-  </p>
-  <hr style="margin:20px 0;">
-</section>
+    <section class="hero" id="overview">
+      <div class="card hero-main">
+        <div class="kicker"><span class="dot"></span> SECA Portfolio (2025–2026)</div>
+        <h1>Service & Extra-Curricular Activities</h1>
+        <p class="sub">
+          This page tracks my SECA hours and what I learned from each activity. It includes totals,
+          reflections, goals, and evidence placeholders.
+        </p>
 
         <div class="hero-actions">
           <a class="btn primary" href="#log">View Hours</a>
@@ -521,6 +524,4 @@
     });
   </script>
 </body>
-</html>
-
-
+</html> 
